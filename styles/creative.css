@@ -1,0 +1,23 @@
+.creative-space {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.search-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-bar input {
+    flex: 1;
+}
+
+.add-button {
+    background: #00a896;
+    width: auto;
+    padding: 0.8rem 1.2rem;
+}
