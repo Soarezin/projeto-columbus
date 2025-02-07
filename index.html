@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,8 @@
     <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/creative.css">
 </head>
+
 <body>
-    <!-- Login Screen -->
     <div id="loginScreen" class="container">
         <h1>LOGIN</h1>
         <form id="loginForm">
@@ -30,8 +31,6 @@
             </div>
         </form>
     </div>
-
-    <!-- Register Screen -->
     <div id="registerScreen" class="container hidden">
         <h1>CADASTRE-SE</h1>
         <form id="registerForm">
@@ -54,22 +53,51 @@
         </form>
     </div>
 
-    <!-- Creative Space Screen -->
-    <div id="creativeScreen" class="container hidden">
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Pesquisar">
-            <button class="add-button">+</button>
+
+<div id="creativeScreen" class="container fullscreen">
+    <div class="header">
+        <h1>Gerenciamento de Cargas</h1>
+        <div class="top-actions">
+            <input type="text" id="searchInput" placeholder="Pesquisar cargas...">
+            <button id="addCargo" class="add-button">Nova Carga</button>
         </div>
-        <div class="creative-space" id="creativeContent">
-            *espaço criativo*
-        </div>
-        <button id="logout" style="margin-top: 1rem;">Logout</button>
     </div>
+
+    <div class="cargos-grid">
+        <div class="cargos-header">
+            <div class="cargo-col">Descrição</div>
+            <div class="cargo-col">Data de Inclusão</div>
+            <div class="cargo-col">Ações</div>
+        </div>
+        <div id="cargosList" class="cargos-list">
+            <!-- Cargas serão inseridas aqui dinamicamente -->
+        </div>
+    </div>
+    
+    <button id="logout" class="logout-button">Logout</button>
+</div>
+
+<div id="cargoModal" class="modal">
+    <div class="modal-content">
+        <h2 id="modalTitle">Nova Carga</h2>
+        <textarea id="cargoDescription" placeholder="Descrição da carga..." rows="4"></textarea>
+        <div class="modal-actions">
+            <button id="cancelCargo" class="cancel-button">Cancelar</button>
+            <button id="saveCargo" class="save-button">Salvar</button>
+        </div>
+    </div>
+</div>
+
+<div id="notification"></div>   
+
+    <div id="notification"></div>
 
     <div id="notification"></div>
 
     <script src="js/utils.js"></script>
     <script src="js/screens.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/creative.js"></script>
 </body>
+
 </html>

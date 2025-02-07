@@ -1,4 +1,3 @@
-// Utility Functions
 const sha256 = async (message) => {
     const msgBuffer = new TextEncoder().encode(message);
     const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
